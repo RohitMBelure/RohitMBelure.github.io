@@ -12613,8 +12613,29 @@ textarea.form-control {
   }
 }
 
-.rohitIcon {
-  /* border-radius: 20%; */
-  clip-path: circle();
-  width: 90px;
+.photo-img {
+  border: 3px solid #005cbf;
+  border-radius: 30px;
+  width: 10rem;
+  height: 28rem;
+}
+
+.button-flex {
+  border: none;
+  padding: 8px;
+  font-weight: bold;
+  color: black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.tech-stack {
+  margin: 8px 0px 5px;
+  font-weight: bold;
+}
+
+.send-message {
+  margin: auto;
 }
