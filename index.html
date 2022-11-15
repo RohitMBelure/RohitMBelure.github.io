@@ -42,7 +42,7 @@
             href="#home-section"
             class="port-link"
             style="font-weight: 800; text-transform: uppercase"
-            ><span>Portfolio</span></a
+            ><span>rohit belure</span></a
           >
         </a>
         <button
@@ -85,11 +85,12 @@
             </li>
             <li class="nav-item">
               <a
-                href="https://drive.google.com/file/d/150saF0j1619BSD4q1EGijU96TW_Z3vo7/view"
-                target="_blank"
-                class="nav-link"
-                ><span>Resume</span></a
-              >
+                onclick= "window.open('https://drive.google.com/file/d/150saF0j1619BSD4q1EGijU96TW_Z3vo7/view?usp=share_link')"
+                href="https://drive.google.com/uc?export=download&id=150saF0j1619BSD4q1EGijU96TW_Z3vo7"
+                style="target:_blank;"
+                class="nav-link" 
+                >Resume
+              </a>
             </li>
           </ul>
         </div>
@@ -111,9 +112,10 @@
           </h1>
           <p style="margin-top: 5rem">
             <a
-              href="https://drive.google.com/file/d/150saF0j1619BSD4q1EGijU96TW_Z3vo7/view"
-              target="_blank"
-              class="btn btn-primary py-3 px-3"
+            onclick= "window.open('https://drive.google.com/file/d/150saF0j1619BSD4q1EGijU96TW_Z3vo7/view?usp=share_link')"
+            href="https://drive.google.com/uc?export=download&id=150saF0j1619BSD4q1EGijU96TW_Z3vo7"
+            style="target:_blank;"
+            class="btn btn-primary py-3 px-3"
               >DOWNLOAD RESUME</a
             >
           </p>
@@ -357,6 +359,41 @@
           </div>
         </div>
 
+        <div class="row" style="padding: 1rem; margin-bottom: 1.5rem; border: 1px solid #ffbd39; border-radius: 7px;" >
+          <div class="col-md-4">
+              <a href="https://tata-1mg-clone-sage.vercel.app/" target="_blank">
+                <img class="project img d-flex justify-content-center align-items-center img-hover"
+                  src="images/tata_1mg_clone.png" alt="project-image"
+                >
+              </a>
+          </div>
+          <div class="col-md-8" >
+            <div style="padding-left: 1rem; ">
+              <h4 style="margin-bottom: 1rem; font-weight: 500;"><b>TATA 1MG CLONE</b></h4>
+              <p>
+                This project is clone of TATA-1mg website. TATA-1mg is an e-commerce website. We have clonned various pages of this website, where user can sign up, sign in, view different products, view
+                detailed information about a product, order product, and make
+                payment through this project.
+              </p>
+              <p class="tech-stack">Tech Stacks:</p>
+              <p>HTML, CSS, JavaScript, React, Redux, React-Icon, Chakra-UI, MongoDB, ExpressJS, NodeJs, Mongoose, Mongo-Atlas, etc</p>
+              <div>
+                <button class="button-flex">
+                  <a href="https://tata-1mg-clone-sage.vercel.app/" target="_blank"
+                    >LIVE DEMO</a
+                  >
+                </button>
+                <button class="button-flex">
+                  <a
+                    href="https://github.com/sonuprasad66/omniscient-sheet-6598" target="_blank"
+                    >VIEW CODE</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -397,7 +434,7 @@
           </div>
         </div>
 
-        <div class="row no-gutters block-9">
+        <div class="row no-gutters block-9 w-100">
           <div class="col-md-6 order-md-last d-flex">
             <form action="https://formspree.io/f/xlevpldb" target="_blank" method="POST" class="bg-light p-4 p-md-5 contact-form">
               <div class="form-group">
@@ -545,5 +582,21 @@ GitHubCalendar(".calendar", "RohitMBelure", {
     return fetch(`https://your-proxy.com/github?user=${RohitMBelure}`);
   },
 });
+
+function downloadButton() {
+  return browser.downloads.resume("https://drive.google.com/file/d/150saF0j1619BSD4q1EGijU96TW_Z3vo7/view")
+}
+
+// function downloadButton() {
+//   return window.open("https://drive.google.com/file/d/150saF0j1619BSD4q1EGijU96TW_Z3vo7/view")
+// }
+
+// const downloadButton = document.getElementById("resumedownload").onclick = function (){
+//   window.open("https://drive.google.com/file/d/150saF0j1619BSD4q1EGijU96TW_Z3vo7/view")
+// 
+
+// let resuming = browser.downloads.resume(
+//   "https://drive.google.com/file/d/150saF0j1619BSD4q1EGijU96TW_Z3vo7/view"
+// )
 
 </script>

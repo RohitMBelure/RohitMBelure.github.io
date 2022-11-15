@@ -589,11 +589,11 @@ pre code {
 }
 
 .container {
-  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  width: 100%;
 }
 @media (min-width: 576px) {
   .container {
@@ -12847,8 +12847,8 @@ textarea.form-control {
   height: 300px;
 }
 
-.gitstat_container {
-  /* background-color: green; */
+.w-100 {
+  width: 100%;
 }
 
 .gitstat {
@@ -12856,6 +12856,7 @@ textarea.form-control {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 2rem;
+  width: 100%;
 }
 .gitstat > img {
   width: 47%;
