@@ -17,7 +17,7 @@ MongoDB is optional for the portfolio shell. To enable a database connection, co
 
 ## GitHub Pages deployment
 
-GitHub Pages must use **GitHub Actions** as its source. The workflow in `.github/workflows/deploy-pages.yml` runs `npm ci`, builds the Vite app, and deploys the generated `dist` folder. Do not deploy the repository root directly, because `src/main.jsx` is source code and browsers cannot load JSX as a module.
+GitHub Pages should use **GitHub Actions** as its source. The workflow in `.github/workflows/deploy-pages.yml` runs `npm ci`, builds the Vite app, and deploys the generated `dist` folder. `app.html` is the Vite source template; the root `index.html` is also kept as a compiled fallback for the legacy branch-root Pages publisher.
 
 In the repository settings, open **Pages**, set **Build and deployment > Source** to **GitHub Actions**, and push to `main`.
 
