@@ -40,7 +40,7 @@ button {
   margin: 0 auto;
 }
 .hero-surface {
-  overflow: hidden;
+  overflow: clip;
   background: radial-gradient(
     circle at 75% 42%,
     #294660 0,
@@ -49,19 +49,61 @@ button {
   );
   color: var(--paper);
 }
+.portfolio-shell.light-mode .hero-surface {
+  background: linear-gradient(135deg, #e9f3f5 0%, #f7f4ee 72%);
+  color: var(--ink);
+}
+.portfolio-shell.light-mode .site-header {
+  border-color: rgba(20, 32, 48, 0.14);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 18px 45px rgba(20, 32, 48, 0.1);
+}
+.portfolio-shell.light-mode .brand span {
+  color: var(--ink);
+}
+.portfolio-shell.light-mode .nav-links > a {
+  color: var(--muted);
+}
+.portfolio-shell.light-mode .nav-links > a:hover {
+  color: var(--ink);
+}
+.portfolio-shell.light-mode .hero-description,
+.portfolio-shell.light-mode .eyebrow {
+  color: var(--muted);
+}
+.portfolio-shell.light-mode .theme-button,
+.portfolio-shell.light-mode .menu-button {
+  border-color: rgba(20, 32, 48, 0.14);
+  background: rgba(255, 255, 255, 0.65);
+  color: var(--ink);
+}
 .site-header {
+  position: sticky;
+  top: 14px;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 112px;
+  height: 78px;
+  margin-top: 16px;
+  padding: 0 18px;
+  border: 1px solid rgba(120, 147, 170, 0.24);
+  border-radius: 26px;
+  background: rgba(7, 13, 22, 0.78);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18px);
 }
 .brand {
-  font-size: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #91a3ff;
+  font-size: 1rem;
   font-weight: 800;
-  letter-spacing: -0.12em;
+  letter-spacing: -0.04em;
 }
 .brand span {
-  color: var(--cyan);
+  color: #dbe2ff;
 }
 .nav-links {
   display: flex;
@@ -91,11 +133,32 @@ button {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+.theme-button,
+.menu-button {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(120, 147, 170, 0.25);
+  border-radius: 15px;
+  background: rgba(20, 29, 43, 0.7);
+  color: #f5f7ff;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+.theme-button {
+  margin-left: auto;
+  margin-right: 10px;
+  color: #fff4be;
+}
+.theme-button:hover,
+.menu-button:hover {
+  border-color: rgba(145, 163, 255, 0.7);
+  background: rgba(34, 45, 65, 0.9);
+  transform: translateY(-1px);
+}
 .menu-button {
   display: none;
-  border: 0;
   background: transparent;
-  color: white;
 }
 .hero {
   display: grid;
@@ -583,13 +646,15 @@ h2 em {
   }
   .site-header {
     height: 78px;
+    margin-top: 14px;
+    padding: 0 12px 0 16px;
   }
   .menu-button {
     display: block;
   }
   .nav-links {
     position: absolute;
-    top: 78px;
+    top: 92px;
     right: 20px;
     left: 20px;
     z-index: 10;

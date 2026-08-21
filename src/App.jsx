@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   ArrowUpRight,
+  Code2,
   Download,
   Github,
   Linkedin,
@@ -8,6 +9,7 @@ import {
   MapPin,
   Menu,
   Send,
+  Sun,
   X,
 } from "lucide-react";
 
@@ -100,6 +102,7 @@ function openGmail() {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [lightMode, setLightMode] = useState(false);
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -131,12 +134,21 @@ function App() {
 
   const closeMenu = () => setMenuOpen(false);
   return (
-    <>
+    <div className={lightMode ? "portfolio-shell light-mode" : "portfolio-shell"}>
       <div className="hero-surface">
         <header className="site-header page-width">
           <a className="brand" href="#top" onClick={closeMenu}>
-            RB<span>.</span>
+            <Code2 size={22} strokeWidth={2.5} />
+            <span>Rohit Belure</span>
           </a>
+          <button
+            className="theme-button"
+            onClick={() => setLightMode(!lightMode)}
+            aria-label={lightMode ? "Use dark theme" : "Use light theme"}
+            title={lightMode ? "Use dark theme" : "Use light theme"}
+          >
+            <Sun size={19} />
+          </button>
           <button
             className="menu-button"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -418,7 +430,7 @@ function App() {
           </a>
         </span>
       </footer>
-    </>
+    </div>
   );
 }
 
